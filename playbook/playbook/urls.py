@@ -22,5 +22,6 @@ urlpatterns = [
     path('', views.index),
     path('contact/', views.contact),
     path('give/', views.give),
+    path('send-email', views.send_email),
   
 ]

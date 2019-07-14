@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 
@@ -28,5 +28,16 @@ def give(request):
     return render(request, 'give.html', context)
 
 
+def send_email(request):
+
+    if request.method == 'POST':
+
+        name = request.POST["name"]
+        email = request.POST["email"]
+        message = request.POST["message"]
+
+
+    return redirect("send-email.html")
+# Do something with these three variables... return redirect("/") # Return a redirect!
 
 
